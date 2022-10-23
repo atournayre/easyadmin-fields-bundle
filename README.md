@@ -8,6 +8,7 @@ Ce bundle met à disposition des champs personnalisés pour Easy Admin.
 composer require atournayre/easyadmin-fields-bundle
 ```
 
-## Configuration
-
-A venir
+## Champs
+| Champ | Description                                      |
+|-------|--------------------------------------------------|
+| enum  | Afficher la valeur d'une propriété de type Enum. |
