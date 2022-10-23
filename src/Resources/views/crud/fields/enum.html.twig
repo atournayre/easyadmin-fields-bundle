@@ -1,4 +1,11 @@
 {# @var ea \EasyCorp\Bundle\EasyAdminBundle\Context\AdminContext #}
 {# @var field \EasyCorp\Bundle\EasyAdminBundle\Dto\FieldDto #}
 {# @var entity \EasyCorp\Bundle\EasyAdminBundle\Dto\EntityDto #}
-{{ enum_value(entity.instance, field.property) }}
+{% set css = enum_css(entity.instance, field.property) %}
+
+{% if css is empty %}
+    {{ enum_value(entity.instance, field.property) }}
+{% else %}
+    <span class="{{ css }}">{{ enum_value(entity.instance, field.property) }}</span>
+{% endif %}
+
